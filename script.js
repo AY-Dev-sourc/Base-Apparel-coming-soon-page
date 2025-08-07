@@ -6,12 +6,12 @@ let valid = document.getElementById("valid");
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     let value = emailInput.value.trim()
-    if (value == "" || value.includes('A')) {
+    if (value == "" || value.includes('@')) {
         valid.classList.add('show');
         Error.classList.add('show');
-        emailInput.style.backgroundColor = "hsl(0%,90%,40%)";
+        emailInput.style.backgroundColor = "hsl(0,90%,40%)";
         emailInput.focus()
-    } else if(emailInput.value.trim() !== "") {
+    } else {
         valid.classList.remove('show');
         Error.classList.remove('show');
     }
