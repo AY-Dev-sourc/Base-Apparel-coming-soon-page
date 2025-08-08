@@ -6,13 +6,14 @@ let valid = document.getElementById("valid");
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     let value = emailInput.value.trim()
-    if (value == "" || value.includes('@')) {
+    if (value == "") {
         valid.classList.add('show');
         Error.classList.add('show');
-        emailInput.style.backgroundColor = "hsl(0,90%,40%)";
+        emailInput.classList.add('invalid');
         emailInput.focus()
     } else {
         valid.classList.remove('show');
         Error.classList.remove('show');
+        emailInput.classList.remove('invalid');
     }
 });
