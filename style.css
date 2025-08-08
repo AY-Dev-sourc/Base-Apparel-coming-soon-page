@@ -127,6 +127,11 @@ body{
 .show {
     display: block;
 }
+input.invalid {
+    border: 2px solid hsl(0, 93%, 68%) !important;
+    background-color: rgba(255, 0, 0, 0.05) !important;
+}
+
 @media screen and (min-width:46.25em){
     /* style box's */
     .container{
